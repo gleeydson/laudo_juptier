@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checklist Roteador - Sistema de Laudos</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <a href="index.html" class="btn-voltar">← Voltar</a>
+            <h1>CHECKLIST ROTEADOR</h1>
+            <div class="header-info">
+                <div class="input-group">
+                    <label for="mac">MAC:</label>
+                    <input type="text" id="mac" placeholder="Ex: AA:BB:CC:DD:EE:FF">
+                </div>
+                <div class="input-group">
+                    <label for="data">DATA:</label>
+                    <input type="date" id="data">
+                </div>
+            </div>
+        </header>
+
+        <form id="checklistForm" class="checklist-form">
+            <div class="checklist-item">
+                <label>1. Verificar se está ligando</label>
+                <div class="options">
+                    <label><input type="radio" name="item1" value="OK"> OK</label>
+                    <label><input type="radio" name="item1" value="NÃO OK"> NÃO OK</label>
+                    <label><input type="radio" name="item1" value="N/A"> N/A</label>
+                </div>
+                <input type="text" class="obs" placeholder="Observações">
+            </div>
+
+            <div class="checklist-item">
+                <label>2. Funcionalidade OLT Huawei</label>
+                <div class="options">
+                    <label><input type="radio" name="item2" value="OK"> OK</label>
+                    <label><input type="radio" name="item2" value="NÃO OK"> NÃO OK</label>
+                    <label><input type="radio" name="item2" value="N/A"> N/A</label>
+                </div>
+                <input type="text" class="obs" placeholder="Observações">
+            </div>
+
+            <div class="checklist-item">
+                <label>3. Teste de Velocidade no cabo OLT Huawei (Acima de 870Mbps)</label>
+                <div class="options">
+                    <label><input type="radio" name="item3" value="OK"> OK</label>
+                    <label><input type="radio" name="item3" value="NÃO OK"> NÃO OK</label>
+                    <label><input type="radio" name="item3" value="N/A"> N/A</label>
+                </div>
+                <input type="text" class="obs" placeholder="Velocidade medida (Mbps)">
+            </div>
+
+            <div class="checklist-item">
+                <label>4. Teste de Velocidade no Wi-Fi 5GHz OLT Huawei (Verificar a tabela de velocidade)</label>
+                <div class="options">
+                    <label><input type="radio" name="item4" value="OK"> OK</label>
+                    <label><input type="radio" name="item4" value="NÃO OK"> NÃO OK</label>
+                    <label><input type="radio" name="item4" value="N/A"> N/A</label>
+                </div>
+                <input type="text" class="obs" placeholder="Velocidade medida (Mbps)">
+            </div>
+
+            <div class="checklist-item">
+                <label>5. Verificar se todos os LEDS estão funcionando</label>
+                <div class="options">
+                    <label><input type="radio" name="item5" value="OK"> OK</label>
+                    <label><input type="radio" name="item5" value="NÃO OK"> NÃO OK</label>
+                    <label><input type="radio" name="item5" value="N/A"> N/A</label>
+                </div>
+                <input type="text" class="obs" placeholder="Observações">
+            </div>
+
+            <div class="checklist-item">
+                <label>6. Verificar o Modelo do Roteador</label>
+                <div class="options">
+                    <label><input type="radio" name="item6" value="OK"> OK</label>
+                    <label><input type="radio" name="item6" value="NÃO OK"> NÃO OK</label>
+                    <label><input type="radio" name="item6" value="N/A"> N/A</label>
+                </div>
+                <input type="text" class="obs" placeholder="Modelo">
+            </div>
+
+            <div class="checklist-item">
+                <label>7. Verificar a Versão do Roteador</label>
+                <div class="options">
+                    <label><input type="radio" name="item7" value="OK"> OK</label>
+                    <label><input type="radio" name="item7" value="NÃO OK"> NÃO OK</label>
+                    <label><input type="radio" name="item7" value="N/A"> N/A</label>
+                </div>
+                <input type="text" class="obs" placeholder="Versão do firmware">
+            </div>
+
+            <div class="checklist-item">
+                <label>8. Testar todas as portas LAN do roteador</label>
+                <div class="options">
+                    <label><input type="radio" name="item8" value="OK"> OK</label>
+                    <label><input type="radio" name="item8" value="NÃO OK"> NÃO OK</label>
+                    <label><input type="radio" name="item8" value="N/A"> N/A</label>
+                </div>
+                <input type="text" class="obs" placeholder="Portas testadas">
+            </div>
+
+            <div class="checklist-item">
+                <label>9. Testar a velocidade de negociação se está em 1Gbps</label>
+                <div class="options">
+                    <label><input type="radio" name="item9" value="OK"> OK</label>
+                    <label><input type="radio" name="item9" value="NÃO OK"> NÃO OK</label>
+                    <label><input type="radio" name="item9" value="N/A"> N/A</label>
+                </div>
+                <input type="text" class="obs" placeholder="Velocidade de negociação">
+            </div>
+
+            <div class="checklist-item">
+                <label>10. Verificar o estado das antenas</label>
+                <div class="options">
+                    <label><input type="radio" name="item10" value="OK"> OK</label>
+                    <label><input type="radio" name="item10" value="NÃO OK"> NÃO OK</label>
+                    <label><input type="radio" name="item10" value="N/A"> N/A</label>
+                </div>
+                <input type="text" class="obs" placeholder="Observações">
+            </div>
+
+            <div class="checklist-item">
+                <label>11. Grau de conservação do Roteador de 0-10 (para aprovar tem que estar acima de 7)</label>
+                <div class="options">
+                    <label><input type="radio" name="item11" value="APROVADO"> APROVADO</label>
+                    <label><input type="radio" name="item11" value="REPROVADO"> REPROVADO</label>
+                    <label><input type="radio" name="item11" value="N/A"> N/A</label>
+                </div>
+                <input type="number" class="obs" placeholder="Nota (0-10)" min="0" max="10">
+            </div>
+
+            <div class="checklist-item">
+                <label>12. Verificar a potência do Wi-Fi 2,4 GHz</label>
+                <div class="options">
+                    <label><input type="radio" name="item12" value="OK"> OK</label>
+                    <label><input type="radio" name="item12" value="NÃO OK"> NÃO OK</label>
+                    <label><input type="radio" name="item12" value="N/A"> N/A</label>
+                </div>
+                <input type="text" class="obs" placeholder="Potência (dBm)">
+            </div>
+
+            <div class="checklist-item">
+                <label>13. Verificar a potência do Wi-Fi 5 GHz</label>
+                <div class="options">
+                    <label><input type="radio" name="item13" value="OK"> OK</label>
+                    <label><input type="radio" name="item13" value="NÃO OK"> NÃO OK</label>
+                    <label><input type="radio" name="item13" value="N/A"> N/A</label>
+                </div>
+                <input type="text" class="obs" placeholder="Potência (dBm)">
+            </div>
+
+            <div class="checklist-item">
+                <label>14. Verificar se o SSID some</label>
+                <div class="options">
+                    <label><input type="radio" name="item14" value="OK"> OK</label>
+                    <label><input type="radio" name="item14" value="NÃO OK"> NÃO OK</label>
+                    <label><input type="radio" name="item14" value="N/A"> N/A</label>
+                </div>
+                <input type="text" class="obs" placeholder="Observações">
+            </div>
+
+            <div class="checklist-item">
+                <label>15. Verificar voltagem</label>
+                <div class="options">
+                    <label><input type="radio" name="item15" value="OK"> OK</label>
+                    <label><input type="radio" name="item15" value="NÃO OK"> NÃO OK</label>
+                    <label><input type="radio" name="item15" value="N/A"> N/A</label>
+                </div>
+                <input type="text" class="obs" placeholder="Voltagem (V)">
+            </div>
+
+            <div class="checklist-item">
+                <label>16. Se for ONT, verificar o sinal óptico no Power Meter e no Sistema</label>
+                <div class="options">
+                    <label><input type="radio" name="item16" value="OK"> OK</label>
+                    <label><input type="radio" name="item16" value="NÃO OK"> NÃO OK</label>
+                    <label><input type="radio" name="item16" value="N/A"> N/A</label>
+                </div>
+                <input type="text" class="obs" placeholder="Sinal óptico (dBm)">
+            </div>
+
+            <div class="checklist-item">
+                <label>17. Verificar o aquecimento do Roteador</label>
+                <div class="options">
+                    <label><input type="radio" name="item17" value="OK"> OK</label>
+                    <label><input type="radio" name="item17" value="NÃO OK"> NÃO OK</label>
+                    <label><input type="radio" name="item17" value="N/A"> N/A</label>
+                </div>
+                <input type="text" class="obs" placeholder="Temperatura">
+            </div>
+
+            <div class="checklist-item">
+                <label>18. Atualizar a versão do firmware do Roteador</label>
+                <div class="options">
+                    <label><input type="radio" name="item18" value="OK"> OK</label>
+                    <label><input type="radio" name="item18" value="NÃO OK"> NÃO OK</label>
+                    <label><input type="radio" name="item18" value="N/A"> N/A</label>
+                </div>
+                <input type="text" class="obs" placeholder="Nova versão">
+            </div>
+
+            <div class="checklist-item">
+                <label>19. Testar IPV6</label>
+                <div class="options">
+                    <label><input type="radio" name="item19" value="OK"> OK</label>
+                    <label><input type="radio" name="item19" value="NÃO OK"> NÃO OK</label>
+                    <label><input type="radio" name="item19" value="N/A"> N/A</label>
+                </div>
+                <input type="text" class="obs" placeholder="Observações">
+            </div>
+
+            <div class="checklist-item">
+                <label>20. Resetar o Roteador</label>
+                <div class="options">
+                    <label><input type="radio" name="item20" value="OK"> OK</label>
+                    <label><input type="radio" name="item20" value="NÃO OK"> NÃO OK</label>
+                    <label><input type="radio" name="item20" value="N/A"> N/A</label>
+                </div>
+                <input type="text" class="obs" placeholder="Observações">
+            </div>
+
+            <div class="actions">
+                <button type="button" id="btnSalvar" class="btn btn-primary">Salvar Laudo</button>
+                <button type="button" id="btnImprimir" class="btn btn-secondary">Imprimir</button>
+                <button type="button" id="btnLimpar" class="btn btn-danger">Limpar Formulário</button>
+            </div>
+        </form>
+
+        <div class="assinatura-section">
+            <div class="assinatura-campo">
+                <label for="responsavel">Responsável pelo teste:</label>
+                <input type="text" id="responsavel" placeholder="Nome completo">
+            </div>
+            <div class="assinatura-linha">
+                <div class="linha"></div>
+                <p>Assinatura</p>
+            </div>
+        </div>
+
+        <div id="resultado" class="resultado"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

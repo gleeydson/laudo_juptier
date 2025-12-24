@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Laudos - Escolha o Tipo</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .menu-container {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .menu-content {
+            text-align: center;
+            background: white;
+            padding: 50px;
+            border-radius: 15px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+            max-width: 600px;
+            width: 100%;
+        }
+
+        .menu-title {
+            font-size: 2.5em;
+            color: #2c3e50;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .menu-subtitle {
+            font-size: 1.2em;
+            color: #7f8c8d;
+            margin-bottom: 40px;
+        }
+
+        .menu-options {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .menu-card {
+            flex: 1;
+            min-width: 250px;
+            padding: 40px 30px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            color: white;
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+        }
+
+        .menu-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.5);
+        }
+
+        .menu-card.onu {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            box-shadow: 0 5px 15px rgba(245, 87, 108, 0.3);
+        }
+
+        .menu-card.onu:hover {
+            box-shadow: 0 10px 25px rgba(245, 87, 108, 0.5);
+        }
+
+        .menu-card-icon {
+            font-size: 3em;
+            margin-bottom: 15px;
+        }
+
+        .menu-card-title {
+            font-size: 1.5em;
+            font-weight: bold;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .menu-card-description {
+            font-size: 0.95em;
+            opacity: 0.9;
+        }
+
+        @media screen and (max-width: 768px) {
+            .menu-content {
+                padding: 30px;
+            }
+
+            .menu-title {
+                font-size: 1.8em;
+            }
+
+            .menu-options {
+                flex-direction: column;
+            }
+
+            .menu-card {
+                min-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="menu-container">
+        <div class="menu-content">
+            <h1 class="menu-title">Sistema de Laudos</h1>
+            <p class="menu-subtitle">Selecione o tipo de equipamento para análise</p>
+
+            <div class="menu-options">
+                <a href="laudo-roteador.html" class="menu-card roteador">
+                    <div class="menu-card-icon">📡</div>
+                    <div class="menu-card-title">Roteador</div>
+                    <div class="menu-card-description">Checklist completo para análise de roteadores</div>
+                </a>
+
+                <a href="laudo-onu.html" class="menu-card onu">
+                    <div class="menu-card-icon">🔌</div>
+                    <div class="menu-card-title">ONU</div>
+                    <div class="menu-card-description">Checklist específico para análise de ONUs</div>
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

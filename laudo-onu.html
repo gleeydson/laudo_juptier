@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checklist ONU - Sistema de Laudos</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <a href="index.html" class="btn-voltar">← Voltar</a>
+        <h1>CHECKLIST ONU</h1>
+        <div class="header-info">
+          <div class="input-group">
+            <label for="mac">MAC:</label>
+            <input type="text" id="mac" placeholder="Ex: AA:BB:CC:DD:EE:FF" />
+          </div>
+          <div class="input-group">
+            <label for="data">DATA:</label>
+            <input type="date" id="data" />
+          </div>
+        </div>
+      </header>
+
+      <form id="checklistForm" class="checklist-form">
+        <div class="checklist-item">
+          <label>1. Modelo da ONU</label>
+          <div class="options">
+            <label><input type="radio" name="item1" value="OK" /> OK</label>
+            <label
+              ><input type="radio" name="item1" value="NÃO OK" /> NÃO OK</label
+            >
+            <label><input type="radio" name="item1" value="N/A" /> N/A</label>
+          </div>
+          <input type="text" class="obs" placeholder="Modelo" />
+        </div>
+
+        <div class="checklist-item">
+          <label>2. Versão da ONU</label>
+          <div class="options">
+            <label><input type="radio" name="item2" value="OK" /> OK</label>
+            <label
+              ><input type="radio" name="item2" value="NÃO OK" /> NÃO OK</label
+            >
+            <label><input type="radio" name="item2" value="N/A" /> N/A</label>
+          </div>
+          <input type="text" class="obs" placeholder="Versão do firmware" />
+        </div>
+
+        <div class="checklist-item">
+          <label>3. Verificar se está ligando</label>
+          <div class="options">
+            <label><input type="radio" name="item3" value="OK" /> OK</label>
+            <label
+              ><input type="radio" name="item3" value="NÃO OK" /> NÃO OK</label
+            >
+            <label><input type="radio" name="item3" value="N/A" /> N/A</label>
+          </div>
+          <input type="text" class="obs" placeholder="Observações" />
+        </div>
+
+        <div class="checklist-item">
+          <label>4. Funcionalidade OLT Huawei</label>
+          <div class="options">
+            <label><input type="radio" name="item4" value="OK" /> OK</label>
+            <label
+              ><input type="radio" name="item4" value="NÃO OK" /> NÃO OK</label
+            >
+            <label><input type="radio" name="item4" value="N/A" /> N/A</label>
+          </div>
+          <input type="text" class="obs" placeholder="Observações" />
+        </div>
+
+        <div class="checklist-item">
+          <label>5. Teste de Velocidade OLT Huawei (Acima de 870Mbps)</label>
+          <div class="options">
+            <label><input type="radio" name="item5" value="OK" /> OK</label>
+            <label
+              ><input type="radio" name="item5" value="NÃO OK" /> NÃO OK</label
+            >
+            <label><input type="radio" name="item5" value="N/A" /> N/A</label>
+          </div>
+          <input
+            type="text"
+            class="obs"
+            placeholder="Velocidade medida (Mbps)"
+          />
+        </div>
+
+        <div class="checklist-item">
+          <label>6. Verificar se todos os LEDS estão funcionando</label>
+          <div class="options">
+            <label><input type="radio" name="item6" value="OK" /> OK</label>
+            <label
+              ><input type="radio" name="item6" value="NÃO OK" /> NÃO OK</label
+            >
+            <label><input type="radio" name="item6" value="N/A" /> N/A</label>
+          </div>
+          <input type="text" class="obs" placeholder="Observações" />
+        </div>
+
+        <div class="checklist-item">
+          <label
+            >7. Verificar o SINAL, com Power Meter e no sistema (GPON)</label
+          >
+          <div class="options">
+            <label><input type="radio" name="item7" value="OK" /> OK</label>
+            <label
+              ><input type="radio" name="item7" value="NÃO OK" /> NÃO OK</label
+            >
+            <label><input type="radio" name="item7" value="N/A" /> N/A</label>
+          </div>
+          <input type="text" class="obs" placeholder="Sinal (dBm)" />
+        </div>
+
+        <div class="checklist-item">
+          <label>8. Testar Voltagem da Fonte</label>
+          <div class="options">
+            <label><input type="radio" name="item8" value="OK" /> OK</label>
+            <label
+              ><input type="radio" name="item8" value="NÃO OK" /> NÃO OK</label
+            >
+            <label><input type="radio" name="item8" value="N/A" /> N/A</label>
+          </div>
+          <input type="text" class="obs" placeholder="Voltagem (V)" />
+        </div>
+
+        <div class="checklist-item">
+          <label
+            >9. Deixar ONU ligada por 10 minutos para verificar o
+            aquecimento</label
+          >
+          <div class="options">
+            <label><input type="radio" name="item9" value="OK" /> OK</label>
+            <label
+              ><input type="radio" name="item9" value="NÃO OK" /> NÃO OK</label
+            >
+            <label><input type="radio" name="item9" value="N/A" /> N/A</label>
+          </div>
+          <input type="text" class="obs" placeholder="Temperatura" />
+        </div>
+
+        <div class="checklist-item">
+          <label>10. Resetar a ONU</label>
+          <div class="options">
+            <label><input type="radio" name="item10" value="OK" /> OK</label>
+            <label
+              ><input type="radio" name="item10" value="NÃO OK" /> NÃO OK</label
+            >
+            <label><input type="radio" name="item10" value="N/A" /> N/A</label>
+          </div>
+          <input type="text" class="obs" placeholder="Observações" />
+        </div>
+
+        <div class="actions">
+          <button type="button" id="btnSalvar" class="btn btn-primary">
+            Salvar Laudo
+          </button>
+          <button type="button" id="btnImprimir" class="btn btn-secondary">
+            Imprimir
+          </button>
+          <button type="button" id="btnLimpar" class="btn btn-danger">
+            Limpar Formulário
+          </button>
+        </div>
+      </form>
+
+      <div class="assinatura-section">
+        <div class="assinatura-campo">
+          <label for="responsavel">Responsável pelo teste:</label>
+          <input type="text" id="responsavel" placeholder="Nome completo" />
+        </div>
+        <div class="assinatura-linha">
+          <div class="linha"></div>
+          <p>Assinatura</p>
+        </div>
+      </div>
+
+      <div id="resultado" class="resultado"></div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
